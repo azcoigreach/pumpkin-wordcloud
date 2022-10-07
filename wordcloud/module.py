@@ -128,7 +128,7 @@ class WordCloudGenerator(commands.Cog):
     # group command
     @commands.guild_only()
     @check.acl2(check.ACLevel.MEMBER)
-    @commands.group(name="wordcloud", aliases=["wc"], help=help, invoke_without_command=False)
+    @commands.hybrid_group(name="wordcloud", aliases=["wc"], help=help, invoke_without_command=False, with_app_command=True)
     async def wordcloud_(self, ctx) -> None:
         await utils.discord.send_help(ctx)
 
@@ -145,28 +145,28 @@ class WordCloudGenerator(commands.Cog):
     #     await ctx.send("wordcloud unsubscribes from this channel")
 
     # generate wordcloud
-    @wordcloud_.command(name="generate", aliases=["g", "gen"], help="Manually generate a wordcloud from the last 100 messages in the channel.")
+    @wordcloud_.command(name="generate", aliases=["g", "gen"], help="Manually generate a wordcloud from the last 100 messages in the channel.", with_app_command=True)
     async def generate(self, ctx: commands.Context,
-        width: int = 400,
-        height: int = 200,
-        prefer_horizontal: float = 0.90,
-        contour_width: float = 0,
-        contour_color: str = "black",
-        scale: float = 1,
-        min_font_size: int = 4,
+        width: int = 1000,
+        height: int = 500,
+        prefer_horizontal: float = 0.65,
+        contour_width: float = 0.0,
+        contour_color: str = "#000000",
+        scale: float = 1.0,
+        min_font_size: int = 10,
         font_step: int = 1,
         max_words: int = 200,
         background_color: str = "#00000000",
         max_font_size: int = None,
         mode: str = "RGBA",
-        relative_scaling: float = -1,
+        relative_scaling: float = -1.0,
         regexp: str = None,
         collocations: bool = True,
-        colormap: str = "viridis",
+        colormap: str = "Pastel2",
         normalize_plurals: bool = True,
-        repeat: bool = False,
+        repeat: bool = True,
         include_numbers: bool = False,
-        min_word_length: int = 0,
+        min_word_length: int = 3,
         collocation_threshold: int = 30,
         ) -> None:
         
