@@ -59,28 +59,49 @@ class WordCloudGenerator(commands.Cog):
 
         # get the text of the last 100 messages in the channel
         # await bot_log.debug all the parameters
-        await bot_log.debug(ctx.guild, ctx.channel, f"text: {text[:100]}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"width: {width}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"height: {height}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"prefer_horizontal: {prefer_horizontal}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"contour_width: {contour_width}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"contour_color: {contour_color}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"scale: {scale}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"min_font_size: {min_font_size}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"font_step: {font_step}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"max_words: {max_words}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"background_color: {background_color}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"max_font_size: {max_font_size}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"mode: {mode}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"relative_scaling: {relative_scaling}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"regexp: {regexp}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"collocations: {collocations}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"colormap: {colormap}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"normalize_plurals: {normalize_plurals}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"repeat: {repeat}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"include_numbers: {include_numbers}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"min_word_length: {min_word_length}")
-        await bot_log.debug(ctx.guild, ctx.channel, f"collocation_threshold: {collocation_threshold}")
+        await bot_log.debug(ctx.guild, ctx.channel, f"text: {text[:100]}\n \
+        width: {width}\n \
+        height: {height}\n \
+        prefer_horizontal: {prefer_horizontal}\n \
+        contour_width: {contour_width}\n \
+        contour_color: {contour_color}\n \
+        scale: {scale}\n \
+        min_font_size: {min_font_size}\n \
+        font_step: {font_step}\n \
+        max_words: {max_words}\n \
+        background_color: {background_color}\n \
+        max_font_size: {max_font_size}\n \
+        mode: {mode}\n \
+        relative_scaling: {relative_scaling}\n \
+        regexp: {regexp}\n \
+        collocations: {collocations}\n \
+        colormap: {colormap}\n \
+        normalize_plurals: {normalize_plurals}\n \
+        repeat: {repeat}\n \
+        include_numbers: {include_numbers}\n \
+        min_word_length: {min_word_length}\n \
+        collocation_threshold: {collocation_threshold}\n \
+        ")
+
+
+        # await bot_log.debug(ctx.guild, ctx.channel, f"contour_width: {contour_width}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"contour_color: {contour_color}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"scale: {scale}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"min_font_size: {min_font_size}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"font_step: {font_step}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"max_words: {max_words}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"background_color: {background_color}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"max_font_size: {max_font_size}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"mode: {mode}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"relative_scaling: {relative_scaling}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"regexp: {regexp}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"collocations: {collocations}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"colormap: {colormap}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"normalize_plurals: {normalize_plurals}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"repeat: {repeat}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"include_numbers: {include_numbers}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"min_word_length: {min_word_length}")
+        # await bot_log.debug(ctx.guild, ctx.channel, f"collocation_threshold: {collocation_threshold}")
 
     
         # generate the wordcloud

@@ -1,1 +1,1 @@
-git+https://github.com/azcoigreach/word_cloud_api.git
+git+https://github.com/amueller/word_cloud.git
